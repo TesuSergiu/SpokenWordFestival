@@ -51,7 +51,7 @@
   $text = $_POST['mymail'];
   $to = 'tesu_andy_95@yahoo.com';
 
-$dbc = mysqli_connect('50.62.209.40:3306', 'TesuSergiu' , 'DarkEight1995', 'PhPConnection')
+$dbc = mysqli_connect('50.62.209.40:3306', 'TesuSergiu' , '', 'PhPConnection')
 	or die('Could not connect to MySQL.');
 
   $query = "SELECT * FROM email";
