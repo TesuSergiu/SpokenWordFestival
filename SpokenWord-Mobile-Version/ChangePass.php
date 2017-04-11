@@ -98,7 +98,7 @@
 
 <?php
 
-  $dbc = mysqli_connect('50.62.209.40:3306', 'TesuSergiu' , 'DarkEight1995', 'PhPConnection')
+  $dbc = mysqli_connect('50.62.209.40:3306', 'TesuSergiu' , '', 'PhPConnection')
 	or die('Could not connect to MySL.');
 
   $username = $_POST['username'];
