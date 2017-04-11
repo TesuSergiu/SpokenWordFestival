@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Spoken Word Festival</title>
+<link href="WebRedesign.css" rel="stylesheet" type="text/css"/>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="ResponsiveSlides.js-master/responsiveslides.js"></script>
+
+<script>
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
+</script>
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    
+    <ul class="rslides">
+          <li><a href="WebsiteRedesign.html"><img src="Images/logo1r.jpg" alt="logo1" width="450" height="255" id="logo" style="margin: 0 auto; display:block;" /></a></li>
+          <li><a href="WebsiteRedesign.html"><img src="Images/logo2r.jpg" alt="logo2" width="450" height="255" id="logo" style="margin: 0 auto; display:block;" /></a></li>
+          <li><a href="WebsiteRedesign.html"><img src="Images/logo3r.jpg" alt="logo3" width="450" height="255" id="logo" style="margin: 0 auto; display:block;" /></a></li>
+     </ul>
+    
+  </header>
+  <div class="MenuBar">
+      <nav>
+            <ul>
+              <li><a href="WebsiteRedesign.html">HOME</a></li>
+              <li><a href="About.html">ABOUT</a></li>
+              <li><a href="Events.html">EVENTS</a></li>
+              <li><a href="Programme.html">PROGRAMME</a></li>
+              <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+      </nav>
+  </div>
+  
+  
+  <div class="content">
+    
+    <div class="Section1"> 
+    <center><h13>18. <h9>AUGUST /</h9> 19. <h9>AUGUST /</h9> 20. <h9>AUGUST /</h9> <h9>21. AUGUST /</h9> 22. <h9>AUGUST /</h9> 23. <h9>AUGUST</h9></h13></center> </br> </br>
+      <h8>18. AUGUST</h8>
+
+<p><h9>OPEN WORD # 1 - M. CLAUS HØXBROE (OPEN SCENE)</br>
+TIME: 17-19</br>
+LOCATION: STUDENT ODENSE</br>
+ADMISSION: <h13>FREE</h13></br>
+
+Open Word is the scene open and the word free. Beat poet Claus Høxbroe hosts.</br>  
+Cozy atmosphere, relaxation among friends and peers, poetry slam, poetry, rap, performance art, linguistic and musical experimentation. Open Word is what you and I make it, so we know it will be good!  </br> </br>
+// Arranged by Spoken Word Festival and Student Odense in collaboration with Hans Christian Andersen Festival.</br></h9></p>
+ 
+        <h8>19. AUGUST</h8>
+        <p><h9>STORY ENTERTAINERS FEAT. MUSIKER ESBEN JUST</br>
+TIME: 20-23</br>
+LOCATION: THEATRE 95B</br>
+ADMISSION: DOOR: 60 / ENLARGE: 40/ <h14>BUY TICKET</h14></br>
+Spoken Word Festival presents embarrassing, funny and grotesque stories from real life when Graversen and throat again guests Odense. This time invite the musician and songwriter Esben Just into a genremix of narrative and comedy accompanied by musician Øyvind Ougaaard.</br>
+The focus is on the good story when storyentertainer pair consisting of Henrik Strube and Gravers Graversen with musician Esben Just tell stories from real life accompanied by Ougaard on accordion. It is not music, it's not standup or just narrative - but something in the middle. </br></h9></p>
+
+    </div>
+      
+  <!-- end .content --></div>
+  <div class="firstRight">
+    <center><h7>FOLLOW US ON SOCIAL MEDIA</h7></center>
+    	<div class="SocialMedia">
+        	<a href="https://twitter.com/SpokenWord2014"><img class="popup" title="Twitter" src="Images/twitter-logo.png" alt="Twitter" width="80" height="90" id="logoTW" style="margin: 0 auto; display:block;" /></a>
+            <a href="https://www.facebook.com/spokenwordfestival"><img class="popup" title="Facebook" src="Images/facebook-logo.png" alt="Facebook" width="80" height="90" id="logoFB" style="margin: 0 auto; display:block;" /></a>
+            <a href="https://www.youtube.com/user/OdenseSpokenWord?feature=mhee"><img class="popup" title="YouTube" src="Images/youtube-logo.png" alt="YouTube" width="80" height="90" id="logoYT" style="margin: 0 auto; display:block;" /></a>
+        </div>
+  </div>
+  
+  <div class="secondRight">
+   	<center><h7>READ US IN:</h7></center>
+    </br>
+    	<div class="Languages1">
+               <center><a href="http://spokenwordfestival.dk/" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">DK /</a> <a href="WebsiteRedesign.html" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">ENG</a></center>
+        </div>      
+  </div>
+  
+  <div class="thirdRight">
+    	<div class="Languages1">
+               <center><h7>Admin shortcuts</h7></center>
+               </br>
+               
+               <h5>Send emails to volunteers</h5>
+                <form method="post" action="SendMailsTo.php">
+                  	  <label for="subject">Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="subject" id="subject">
+                      </br>
+                      <label for="mymail">Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                       <textarea name="mymail" id="mymail"></textarea>
+                       </br>
+                       <input type="submit" data-inline="true" value="Send">
+    			</form>
+                
+                <h5>Remove old volunteers</h5>
+                <form method="post" action="DeleteSubscribers.php">
+                      <label for="email"></label>
+                      <label for="subject">Enter mail here</label>
+                      <input type="email" name="email" id="email">
+                      <input type="submit" data-inline="true" value="Remove">
+   				 </form>
+               
+        </div>      
+  </div>
+  
+  <footer>
+    <center><h11>&copy;Spoken Word Festival '15</h11></center>
+  </footer>
+  <!-- end .container --></div>
+
+</body>
+</html>

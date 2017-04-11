@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ~~ Body. ~~ */
+body {
+	text-align: center;
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+}
+
+ul, ol, dl { 
+	width: 960px;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	text-align: center;
+}
+h1, h2, h3, h4, h6, p {
+	margin-top: 30px;
+	padding-right: 5px;
+	padding-left: 5px
+}
+
+h5 {
+	color: #FFFFFF;
+	font-weight: 590;
+		
+}
+
+h6 {
+	color: #f04937;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-size: 11px;
+}
+	
+h7 {
+	color: #FFFFFF;
+	font-weight: 900;
+	font-size: 18px;
+}
+
+h8 {
+	color: #f04937;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+h9 {
+	color: #000000;
+	font-size: 13px;
+}
+
+h10 {
+	color: #f04937;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+h11 {
+	width: 960px;
+	padding: 10px 0;
+	background-color: #FFFFFF;
+	position: relative;
+	clear: both; 
+	color: #f04937;
+}
+
+h13 {
+	color: #2da75c;
+}
+
+h14 {
+	color: #f04937;
+}
+
+h15 {
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: bold;
+}
+a img { 
+	border: none;
+}
+/* ~~ Styling for links. ~~ */
+a:link {
+	color: #2da75c;
+	text-decoration: none; 
+}
+a:visited {
+	color: #2da75c;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: underline;
+}
+/* ~~ Fix container. ~~ */
+.container {
+	width: 960px;
+	height: 900px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	text-align:left;
+}
+/* ~~ The header. ~~ */
+header {
+	background-color: #FFFFFF;
+}
+
+.MenuBar {
+	width: 960px;
+	text-align: center;
+	list-style: none;
+	background-color: #FFFFFF;
+	padding-bottom: 10px;
+	text-decoration: none;
+	clear: both;
+	text-decoration: none;
+	margin-bottom: 10px;
+	position: relative;
+	
+}
+.content {
+	margin-top: 12px;
+	padding: 10px 0;
+	width: 680px;
+	float: left;
+}
+
+.Section1 {
+	margin-top:;
+	text-align: justify;
+	width: 500px;	
+}
+
+.Section2 {
+	text-align: justify;
+	width: 500px;	
+}
+.firstRight {
+	margin-top: 30px;
+	float: left;
+	width: 240px;
+	height: 410px;
+	background-color: #f04937;
+	padding: 5px;
+}
+
+.SocialMedia {
+	margin-top: 50px;
+	}
+	
+.secondRight {
+	margin-top: 15px;
+	float: left;
+	width: 240px;
+	height: 140px;
+	background-color: #2da75c;
+	padding: 5px;
+	
+}
+
+.thirdRight {
+	margin-top: 15px;
+	float: left;
+	width: 240px;
+	height: 375px;
+	background-color: #f04937;
+	padding: 5px;
+	padding-bottom: 10px;
+	margin-bottom : 45px;
+}
+
+.popup:hover {
+	width: 95px;
+	height: 105px;	
+}
+
+/* ~~ Spacing ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px;
+	text-decoration: none;
+}
+
+/* ~~ The navigation list styles ~~ */
+nav ul{
+	display: inline;
+	list-style: none; 
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+nav ul li {
+	border-bottom: 1px solid #000000; 
+	text-decoration: none;
+	position: relative;
+	float: left;
+	margin-bottom: 10px;
+	position: relative;
+
+}
+nav a, nav a:visited { 
+	color: #2da75c;
+	background: #FFFFFF;
+	padding: 5px 5px 5px 9px;
+	display: block; 
+	width: 172px;  
+	float: left;
+	text-decoration: none;
+	font: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-weight: 590;
+	position: relative;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #000000;
+	border-bottom-color: #000000;
+	border-top-width: 2px;
+	border-bottom-width: 1.5px;
+	
+	-webkit-transition:  background 0.4s linear 0s, color 0.4s linear 4s;;
+	-o-transition: background 0.4s linear 0s, color 0.4s linear 4s;
+	-ms-transition: background 0.4s linear 0s, color 0.4s linear 4s;
+	-moz-transition: background 0.4s linear 0s, color 0.4s linear 4s;
+}
+nav a:hover, nav a:active, nav a:focus { 
+	background: #f04937;
+	color: #FFFFFF;
+	
+}
+
+/* ~~ Footer. ~~ */
+footer {
+	width: 930px;
+	padding: 9px 0;
+	background-color: #FFFFFF;
+	clear: both; 
+	color: #f04937;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #000000;
+	border-bottom-color: #000000;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+}
+
+
+header, section, aside, article, figure {
+	display: block;
+	margin: 0 auto;
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  width: 60%;
+  border: 0;
+  margin: 0 auto;
+  }

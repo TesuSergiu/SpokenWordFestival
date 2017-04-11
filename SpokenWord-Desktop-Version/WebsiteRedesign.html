@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Spoken Word Festival</title>
+<link href="WebRedesign.css" rel="stylesheet" type="text/css"/>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="ResponsiveSlides.js-master/responsiveslides.js"></script>
+
+<script>
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
+</script>
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+  
+  	<ul class="rslides">
+          <li><a href="WebsiteRedesign.html"><img src="Images/logo1r.jpg" alt="logo1" width="450" height="255" id="logo" style="margin: 0 auto; display:block;" /></a></li>
+          <li><a href="WebsiteRedesign.html"><img src="Images/logo2r.jpg" alt="logo2" width="450" height="255" id="logo" style="margin: 0 auto; display:block;" /></a></li>
+          <li><a href="WebsiteRedesign.html"><img src="Images/logo3r.jpg" alt="logo3" width="450" height="255" id="logo" style="margin: 0 auto; display:block;" /></a></li>
+     </ul>
+        
+        
+  </header>
+  <div class="MenuBar">
+      <nav>
+            <ul>
+              <li><a href="WebsiteRedesign.html">HOME</a></li>
+              <li><a href="About.html">ABOUT</a></li>
+              <li><a href="Events.html">EVENTS</a></li>
+              <li><a href="Programme.html">PROGRAMME</a></li>
+              <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+      </nav>
+  </div>
+  
+  
+  <div class="content">
+    <h8>GET READY FOR SPOKEN WORD FESTIVAL '15</h8>
+    
+    <div class="Section1"> 
+      <p><h9>Spoken Word Festival is over for 2014, and it has been a fantastic week. There has been cast with words in the pedestrian street, the student house has been laid down by the beautiful poetry and music, Kulturmaskinen and study room has been full of spoken words and great thoughts, the entire city has emmet of life.
+Planning for next year's festival are already underway, but until then you can get here the last chapter of our video series, Ordhoveder and words produced by Caspar Nørgaard, featuring some of our wonderful artists. Here Tobias Dalager with a tribute to what we love the most:</h9></p>
+
+	<center><div class="video_holder">
+      <video id="video_player" controls poster="" height="350" width="450">
+        <source id="video_mp4" src="Video/TOBIAS DALAGER.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      </video>
+	</div></center>
+
+		<a href="http://spokenwordfestival.dk/" style="padding-top: 5px; float: right; display:block;">(SEE OTHER NEWS)</a>
+        
+        <h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6>
+    </div>
+      
+  <!-- end .content --></div>
+  <div class="firstRight">
+    <center><h7>FOLLOW US ON SOCIAL MEDIA</h7></center>
+    	<div class="SocialMedia">
+        	<a href="https://twitter.com/SpokenWord2014"><img class="popup" title="Twitter" src="Images/twitter-logo.png" alt="Twitter" width="80" height="90" id="logoTW" style="margin: 0 auto; display:block;" /></a>
+            <a href="https://www.facebook.com/spokenwordfestival"><img class="popup" title="Facebook" src="Images/facebook-logo.png" alt="Facebook" width="80" height="90" id="logoFB" style="margin: 0 auto; display:block;" /></a>
+            <a href="https://www.youtube.com/user/OdenseSpokenWord?feature=mhee"><img class="popup" title="YouTube" src="Images/youtube-logo.png" alt="YouTube" width="80" height="90" id="logoYT" style="margin: 0 auto; display:block;" /></a>
+        </div>
+  </div>
+  
+  <div class="secondRight">
+   	<center><h7>READ US IN:</h7></center>
+    </br>
+    	<div class="Languages1">
+               <center><a href="http://spokenwordfestival.dk/" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">DK /</a> <a href="WebsiteRedesign.html" style="color: #FFFFFF; text-decoration: none; font-weight: 700;">ENG</a></center>
+        </div>      
+  </div>
+  
+  <div class="thirdRight">
+    	<div class="Languages1">
+               <center><h7>Admin shortcuts</h7></center>
+               </br>
+               
+               <h5>Send emails to volunteers</h5>
+                <form method="post" action="SendMailsTo.php">
+                  	  <label for="subject">Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="subject" id="subject">
+                      </br>
+                      <label for="mymail">Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                       <textarea name="mymail" id="mymail"></textarea>
+                       </br>
+                       <input type="submit" data-inline="true" value="Send">
+    			</form>
+                
+                <h5>Remove old volunteers</h5>
+                <form method="post" action="DeleteSubscribers.php">
+                      <label for="email"></label>
+                      <label for="subject">Enter mail here</label>
+                      <input type="email" name="email" id="email">
+                      <input type="submit" data-inline="true" value="Remove">
+   				 </form>
+               
+        </div>      
+  </div>
+  
+  <footer>
+    <center><h11>&copy;Spoken Word Festival '15</h11></center>
+  </footer>
+  <!-- end .container --></div>
+  
+
+</body>
+</html>

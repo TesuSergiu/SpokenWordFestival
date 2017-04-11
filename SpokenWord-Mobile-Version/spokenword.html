@@ -1,0 +1,777 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Spoke Word Festival '15</title>
+<link rel="stylesheet" href="themes/theme.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style type="text/css">
+
+h8 {
+	color: #2da75c;
+	font-size: 20px;
+	}
+
+h10 {
+	color:#000000;
+	border-radius:1px;
+	padding:1px;
+	background-color:#2da75c;
+	} 
+	
+h11 {
+	color:#000000;
+	border-radius:1px;
+	padding:1px;
+	background-color:#D31619;
+	} 
+	
+h12 {
+	font-size: 20px;
+	}
+	
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+</style>
+
+
+</head>
+
+<body>
+
+<!-- Home Page -->
+<!-- Navbar -->
+<div data-role="page" id="Home" data-theme="d">
+
+	<div data-role="header">
+
+    <a href="#myPanel" data-icon="bars" data-iconpos="no-text">MENU</a>
+    <a href="#register" data-icon="user" data-iconpos="notext">Register</a>   		
+            
+                <div data-role="navbar">
+                    <center><img src="Images/Logo.png"  height="170" width="350" alt="logo" /></center>  
+                </div>
+                
+                	<div data-role="panel" data-display="overlay" data-theme="d" id="myPanel">
+               
+                            <ul data-role="listview" class="ui-listview" data-filter="true" data-input="#myFilter">
+                            
+                                
+                                <li data-icon="delete"> <a href="#" data-rel="close">Close menu</a></li> </br> </br>
+                                
+                                    <li><a href="#Home">HOME</a></li> </br>
+                                    <li><a href="#Programme">PROGRAMME</a></li> </br>
+                                    <li><a href="#SpokenWordFestival15">SPOKEN WORD FESTIVAL '15</a></li> </br>
+                                    <li><a href="#SpokenWordAwardsWinners">SPOKEN WORD AWARD WINNERS</a></li> </br>
+                                    <li><a href="#HighlightsAndHistory">HIGHLIGHTS AND HISTORY</a></li> </br>
+                                    
+                             </ul>
+                      </div>
+                      
+      
+       <div data-role="panel" data-position="right" data-display="overlay" data-theme="d" id="register">
+          		
+                <form action="InsertUser.php" method="post">
+                    <h4>Register Here</h4>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" value="">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" value="">
+                    
+                    
+                    
+                    <input type="submit" name="submit" value="Register" data-inline="true">
+                  
+                    
+             	</form>
+                
+                <h4>Change Your Password</h4>
+                <form method="post" action="ChangePass.php">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">      
+                    <label for="password">New Password</label>
+                    <input type="password" name="password" id="password"> 
+                  <input type="submit" data-inline="true" value="Change">
+    			</form>
+                
+               <h4>Subscribe for Information</h4>
+                <form method="post" action="InsertEmail.php">
+                     <input type="email" name="email" id="email" placeholder="Enter your email here">
+                     <input type="submit" data-inline="true" value="Submit">
+    			</form>
+                
+                <h4>Send Emails to Volunteers</h4>
+                <form method="post" action="SendMailsTo.php">
+                  	  <label for="subject">Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="subject" id="subject">
+                      <label for="mymail">Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                       <textarea name="mymail" id="mymail"></textarea>
+                       <input type="submit" data-inline="true" value="Send">
+    			</form>
+                
+                <h4>Delete Subscribers</h4>
+                <form method="post" action="DeleteSubscribers.php">
+                      <label for="email"></label>
+                      <input type="email" name="email" id="email">
+                      <input type="submit" data-inline="true" value="Remove">
+   				 </form>
+                
+                <div class="ui-grid-a">
+                        <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+                    </div>
+                                    
+                </div> 
+                         
+            </div>
+            
+	<div data-role="main" class="ui-content">
+    
+    <center><h4>THANKS FOR THIS YEAR!</h4>
+    
+    <center><div class="video_holder">
+      <video id="video_player" controls poster="" height="290" width="320">
+        <source id="video_mp4" src="Video/TOBIAS DALAGER.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      </video>
+	</div></center>
+    
+    	
+       <p>Spoken Word Festival is over for 2014, and it has been a fantastic week. There has been cast with words in the pedestrian street, the student house has been laid down by the beautiful poetry and music, Kulturmaskinen and study room has been full of spoken words and great thoughts, the entire city has emmet of life.
+Planning for next year's festival are already underway, but until then you can get here the last chapter of our video series, Ordhoveder and words produced by Caspar Nørgaard, featuring some of our wonderful artists. Here Tobias Dalager with a tribute to what we love the most: </p>
+    	
+        <center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+        
+        <center><h4>SEBASTIAN DORSET WINNER OF THE YEAR SPOKEN WORD PRICE!</h4></center>
+        <center><img src="Images/IMG_1120-612x352.jpg"  height="170" width="260" alt="logo" /></center>
+        
+        
+        <p>Last night was this year's Spoken Word prizes awarded in a fully Studenterhus where there was a stand-up comedy on the program. So it was obvious also appropriate that the award should go to a comedian with a seductive style and one that has helped to develop Odense new talent through more open scenes on student house during the year. </br>
+
+Jury writes about Sebastian Dorset: </br>
+
+"The Award recipient has a linguistic tone that does not aim for the lowest common denominator, he is trusting his audience that they understand sentences where the word FUCK is not included in every other sentence. He trusting his audience intellectual capacity, and do not go for the easy solutions, the quick point or a light laugh. His comedy is characterized by the fact that he dare wonder implied decisions, he dares to address the problem, is not stingy with his opinions, even when it is not the light. And although he is making fun of others, so he possesses the wonderful ability to do it with respect, because he possesses the fool's main characteristic self-irony. " </br>
+
+Congratulations to Sebastian!</p> </br>
+        
+           
+    </div>
+
+		<center><h4>WORDS AND WORDS HEADS # 4 - STEFFAN WEBER NIELSEN</h4></center>
+        
+        
+        
+       <center><p>Rap fast delivery, aggressive appearance and immediate pun is of course also part of the Spoken Word Festival. In this short video you can see and hear the rapper Steffan Weber Nielsen provide a taste of the art form.</p></center>
+        
+        
+        <center><div class="video_holder">
+      <video id="video_player" controls poster="" height="290" width="320">
+        <source id="video_mp4" src="Video/STEFFAN WEBER NIELSEN.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      </video>
+	</div></center>
+    
+    <center><p>Steffan features among other Rap Slam Battles in Copenhagen and works daily he who teaches animation at Odense Vocational School. A man of many talents. Meet him when Rap Slam Battles the Spoken Word Festival in Kulturmaskinen d. August 22 at 22:30.
+Buy your ticket <a href="https://place2book.com/da/choose_ticket_sales_workflow?seccode=a3eb0e04c2">right here!</a>.</p></center>
+        <center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+
+
+    <div data-role="footer" data-position="fixed">
+    
+        <center><h9>&copy;Spoken Word Festival '15</h9></center>
+    
+    </div>
+
+</div>
+
+
+<!-- Programme Page -->
+<!-- Navbar -->
+<div data-role="page" id="Programme" data-theme="d">
+
+	<div data-role="header">
+
+    <a href="#myPanel" data-icon="bars" data-iconpos="no-text">MENU</a>
+    <a href="#register" data-icon="user" data-iconpos="notext">Register</a>   		
+            
+                <div data-role="navbar">
+                    <center><img src="Images/Logo.png"  height="170" width="350" alt="logo" /></center>  
+                </div>
+                	<div data-role="panel" data-display="overlay" data-theme="d" id="myPanel">
+               
+                            <ul data-role="listview" class="ui-listview" data-filter="true" data-input="#myFilter">
+                            
+                                
+                                <li data-icon="delete"> <a href="#" data-rel="close">Close menu</a></li> </br> </br>
+                                
+                                    <li><a href="#Home">HOME</a></li> </br>
+                                    <li><a href="#Programme">PROGRAMME</a></li> </br>
+                                    <li><a href="#SpokenWordFestival15">SPOKEN WORD FESTIVAL '15</a></li> </br>
+                                    <li><a href="#SpokenWordAwardsWinners">SPOKEN WORD AWARD WINNERS</a></li> </br>
+                                    <li><a href="#HighlightsAndHistory">HIGHLIGHTS AND HISTORY</a></li> </br>
+                                    
+                             </ul>
+                      </div>
+                      
+                      <div data-role="panel" data-position="right" data-display="overlay" data-theme="d" id="register">
+          		
+                <form action="InsertUser.php" method="post">
+                    <h4>Register Here</h4>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" value="">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" value="">
+                    
+                    
+                    
+                    <input type="submit" name="submit" value="Register" data-inline="true">
+                  
+                    
+             	</form>
+                
+                <h4>Change Your Password</h4>
+                <form method="post" action="ChangePass.php">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">      
+                    <label for="password">New Password</label>
+                    <input type="password" name="password" id="password"> 
+                  <input type="submit" data-inline="true" value="Change">
+    			</form>
+                
+               <h4>Subscribe for Information</h4>
+                <form method="post" action="InsertEmail.php">
+                     <input type="email" name="email" id="email" placeholder="Enter your email here">
+                     <input type="submit" data-inline="true" value="Submit">
+    			</form>
+                
+                <h4>Send Emails to Volunteers</h4>
+                <form method="post" action="SendMailsTo.php">
+                  	  <label for="subject">Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="subject" id="subject">
+                      <label for="mymail">Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                       <textarea name="mymail" id="mymail"></textarea>
+                       <input type="submit" data-inline="true" value="Send">
+    			</form>
+                
+                <h4>Delete Subscribers</h4>
+                <form method="post" action="DeleteSubscribers.php">
+                      <label for="email"></label>
+                      <input type="email" name="email" id="email">
+                      <input type="submit" data-inline="true" value="Remove">
+   				 </form>
+                
+                <div class="ui-grid-a">
+                        <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+                    </div>
+                                    
+                </div> 
+                         
+            </div>
+            
+	<div data-role="main" class="ui-content">
+    
+    <center><h3>18. AUGUST /19. AUGUST /20. AUGUST /21. AUGUST /22. AUGUST /23. AUGUST<h3></center>
+    
+    <center><p><h8>18. AUGUST</h8> </br> </br>
+
+<h10>FREE</h10> </br>
+OPEN WORD # 1 - M. CLAUS HØXBROE (OPEN SCENE) </br>
+TIME: 17-19 </br>
+LOCATION: STUDENT ODENSE </br>
+ADMISSION: FREE </br>
+Open Word is the scene open and the word free. Beat poet Claus Høxbroe hosts. </br>
+Cozy atmosphere, relaxation among friends and peers, poetry slam, poetry, rap, performance art, linguistic and musical experimentation. Open Word is what you and I make it, so we know it will be good!  </br>  
+// Arranged by Spoken Word Festival and Student Odense in collaboration with Hans Christian Andersen Festival.</p></center>
+
+<center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+
+
+<center><p><h8>OPENING THE SPOKEN WORD FESTIVAL 2014</h8> </br> </br>
+<h10>FREE</h10></br>
+TIME: 15.30-17 </br>
+LOCATION: STUDENT ODENSE </br>
+ADMISSION: FREE </br>
+Come to the official opening of the Spoken Word Festival, when we welcome another year of happy, grim, brilliant, boundary pushing words. Come and taste our word!
+// Arranged by Spoken Word Festival and Student Odense in collaboration with Hans Christian Andersen Festival. </p></center></br>
+
+<center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+
+<center><p><h8>BEAT POETRY AND BEAT CULTURE</h8> </br> </br>
+<h11>BUY TICKETS</h11></br>
+TIME: 20-22 </br>
+LOCATION: STUDENT ODENSE </br>
+ADMISSION: DOOR: 30 </br>
+Spoken Word Festival presents in cooperation with the University of Southern lectures and performance meters. Author Lars Movin feat. Beat poet Claus Høxbroe and musician Vibeke Falden around the beat culture experimental literary upheaval in the late 50ere. </br>
+Come and experience Lars Movin in cooperation with beat poet Claus Høxbroe and musician Vibeke fallen, when they take you through the beat culture history in the late 50ere in a lecture in which music and poetry mixes with the story. </br>
+Claus Høxbroe has in recent years been a regular guest at the Spoken Word Festival by its charismatic poetry. This year, he is also an artistic consultant at the festival.
+Vibeke Falden are also frequent guest at the festival and captivates with its playful, electronic and feminine tones. In 2011 she received the Spoken Word Award. </br>
+With Lars Movin in the forefront is set for a memorable night in good company. </br>
+// Arranged by Spoken Word Festival, Student Odense and University Library in cooperation with the Hans Christian Andersen Festival. </p></center> </br>
+    
+    </div>
+
+
+
+    <div data-role="footer" data-position="fixed">
+    
+        <center><h9>&copy;Spoken Word Festival '15</h9></center>
+    
+    </div>
+
+</div>
+
+
+<!-- Spoken Word Festival '15 Page -->
+<!-- Navbar -->
+<div data-role="page" id="SpokenWordFestival15" data-theme="d">
+
+	<div data-role="header">
+
+    <a href="#myPanel" data-icon="bars" data-iconpos="no-text">MENU</a>
+    <a href="#register" data-icon="user" data-iconpos="notext">Register</a>   		
+            
+                <div data-role="navbar">
+                    <center><img src="Images/Logo.png"  height="170" width="350" alt="logo" /></center>  
+                </div>
+                	<div data-role="panel" data-display="overlay" data-theme="d" id="myPanel">
+               
+                            <ul data-role="listview" class="ui-listview" data-filter="true" data-input="#myFilter">
+                            
+                                
+                                <li data-icon="delete"> <a href="#" data-rel="close">Close menu</a></li> </br> </br>
+                                
+                                    <li><a href="#Home">HOME</a></li> </br>
+                                    <li><a href="#Programme">PROGRAMME</a></li> </br>
+                                    <li><a href="#SpokenWordFestival15">SPOKEN WORD FESTIVAL '15</a></li> </br>
+                                    <li><a href="#SpokenWordAwardsWinners">SPOKEN WORD AWARD WINNERS</a></li> </br>
+                                    <li><a href="#HighlightsAndHistory">HIGHLIGHTS AND HISTORY</a></li> </br>
+                                    
+                             </ul>
+                      </div>
+                      
+                      <div data-role="panel" data-position="right" data-display="overlay" data-theme="d" id="register">
+          		
+                <form action="InsertUser.php" method="post">
+                    <h4>Register Here</h4>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" value="">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" value="">
+                    
+                    
+                    
+                    <input type="submit" name="submit" value="Register" data-inline="true">
+                  
+                    
+             	</form>
+                
+                <h4>Change Your Password</h4>
+                <form method="post" action="ChangePass.php">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">      
+                    <label for="password">New Password</label>
+                    <input type="password" name="password" id="password"> 
+                  <input type="submit" data-inline="true" value="Change">
+    			</form>
+                
+               <h4>Subscribe for Information</h4>
+                <form method="post" action="InsertEmail.php">
+                     <input type="email" name="email" id="email" placeholder="Enter your email here">
+                     <input type="submit" data-inline="true" value="Submit">
+    			</form>
+                
+                <h4>Send Emails to Volunteers</h4>
+                <form method="post" action="SendMailsTo.php">
+                  	  <label for="subject">Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="subject" id="subject">
+                      <label for="mymail">Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                       <textarea name="mymail" id="mymail"></textarea>
+                       <input type="submit" data-inline="true" value="Send">
+    			</form>
+                
+                <h4>Delete Subscribers</h4>
+                <form method="post" action="DeleteSubscribers.php">
+                      <label for="email"></label>
+                      <input type="email" name="email" id="email">
+                      <input type="submit" data-inline="true" value="Remove">
+   				 </form>
+                
+                <div class="ui-grid-a">
+                        <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+                    </div>
+                                    
+                </div> 
+                         
+            </div>
+            
+	<div data-role="main" class="ui-content">
+    
+    <center><h4>SPOKEN WORD FESTIVAL 2014</h4>
+    
+    <center><img src="Images/IMG_7739-612x352.jpg"  height="170" width="260" alt="logo" /></center>
+    
+    <center><p><h12>Spoken Word Festival takes place in 2014, d. 18-23rd August,</h12> six wordy days with the spoken word art in all forms: Storytelling, rap, song, oratory, poetry, music and rhythm and everything in between.</br>
+
+We are rooted in Odense's cultural life and encourage everyone to participate actively with everything you have and can do. We work with the city's cultural institutions, associations, companies and volunteers to organize the festival diversity of concerts, events and projects. The festival takes place at the same time and in collaboration with Hans Christian Andersen Festival.</br>
+
+<h12>Contact:</h12></br>
+
+Project: Betina Følleslev</br>
+
+betina@spokenwordfestival.dk</br>
+
+Tel .: 28 81 07 22</br>
+
+
+</h12>The festival's activities are supported by:</h12></br>
+
+Odense Municipality, Student Odense, the Danish Arts Council, Bikubenfonden, Nordic Culture Fund and Hans Christian Andersen Festival.</br>
+
+<h12>Collaborators:</h12></br>
+
+Hans Christian Andersen Festival, Culture Machine, Student Odense Theatre Momentum, Uteater and study room.<p></center></br>
+    
+    </div>
+
+
+
+    <div data-role="footer" data-position="fixed">
+    
+        <center><h9>&copy;Spoken Word Festival '15</h9></center>
+    
+    </div>
+
+</div>
+	
+
+<!-- Spoken Word Awards Winners Page -->
+<!-- Navbar -->
+<div data-role="page" id="SpokenWordAwardsWinners" data-theme="d">
+
+	<div data-role="header">
+
+    <a href="#myPanel" data-icon="bars" data-iconpos="no-text">MENU</a>
+    <a href="#register" data-icon="user" data-iconpos="notext">Register</a>   		
+            
+                <div data-role="navbar">
+                    <center><img src="Images/Logo.png"  height="170" width="350" alt="logo" /></center>  
+                </div>
+                	<div data-role="panel" data-display="overlay" data-theme="d" id="myPanel">
+               
+                            <ul data-role="listview" class="ui-listview" data-filter="true" data-input="#myFilter">
+                            
+                                
+                                <li data-icon="delete"> <a href="#" data-rel="close">Close menu</a></li> </br> </br>
+                                
+                                    <li><a href="#Home">HOME</a></li> </br>
+                                    <li><a href="#Programme">PROGRAMME</a></li> </br>
+                                    <li><a href="#SpokenWordFestival15">SPOKEN WORD FESTIVAL '15</a></li> </br>
+                                    <li><a href="#SpokenWordAwardsWinners">SPOKEN WORD AWARD WINNERS</a></li> </br>
+                                    <li><a href="#HighlightsAndHistory">HIGHLIGHTS AND HISTORY</a></li> </br>
+                                    
+                             </ul>
+                      </div>
+                      
+                      <div data-role="panel" data-position="right" data-display="overlay" data-theme="d" id="register">
+          		
+                <form action="InsertUser.php" method="post">
+                    <h4>Register Here</h4>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" value="">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" value="">
+                    
+                    
+                    
+                    <input type="submit" name="submit" value="Register" data-inline="true">
+                  
+                    
+             	</form>
+                
+                <h4>Change Your Password</h4>
+                <form method="post" action="ChangePass.php">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">      
+                    <label for="password">New Password</label>
+                    <input type="password" name="password" id="password"> 
+                  <input type="submit" data-inline="true" value="Change">
+    			</form>
+                
+               <h4>Subscribe for Information</h4>
+                <form method="post" action="InsertEmail.php">
+                     <input type="email" name="email" id="email" placeholder="Enter your email here">
+                     <input type="submit" data-inline="true" value="Submit">
+    			</form>
+                
+                <h4>Send Emails to Volunteers</h4>
+                <form method="post" action="SendMailsTo.php">
+                  	  <label for="subject">Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="subject" id="subject">
+                      <label for="mymail">Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                       <textarea name="mymail" id="mymail"></textarea>
+                       <input type="submit" data-inline="true" value="Send">
+    			</form>
+                
+                <h4>Delete Subscribers</h4>
+                <form method="post" action="DeleteSubscribers.php">
+                      <label for="email"></label>
+                      <input type="email" name="email" id="email">
+                      <input type="submit" data-inline="true" value="Remove">
+   				 </form>
+                
+                <div class="ui-grid-a">
+                        <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+                    </div>
+                                    
+                </div> 
+                         
+            </div>
+            
+	<div data-role="main" class="ui-content">
+    
+    <center><h4>SPOKEN WORD AWARD WINNERS</h4></center>
+    
+        <ul class="rslides">
+          <li><img src="Images/305854_177697412311261_84362767_n-612x352 - Copy.jpg" height="170" width="260" alt=""></li>
+          <li><img src="Images/Hans-Laurens-612x352 - Copy.jpg" width="260" alt=""></li>
+          <li><img src="Images/IMG_1120-612x352 - Copy.jpg" height="170" width="260" alt=""></li>
+          <li><img src="Images/Piip-612x352 - Copy.jpg" height="170" width="260" alt=""></li>
+          <li><img src="Images/VibekeFalden-612x352 - Copy.jpg" height="170" width="260" alt=""></li>
+        </ul>
+    
+    </br> </br> </br>
+    
+    <center><h12>Spoken Word prize is awarded once a year in connection with the completion of the Spoken Word Festival in Odense.</h12><center>
+    
+    <center><p>The award is given to an artist who has made a special effort to disseminate, develop or challenge the spoken word art or an artist who offers an inspiring and innovative talent in spoken word art. It can be in the form of storytelling, rap, poetry, songwriting or one of the many expressions and genres, inspired by the spoken word.</br>
+
+The spoken word art is in the understanding an expression that has deep roots in adult education and the democratic formation, and it takes its inspiration from poetry, literature and theater. The spoken word art cultivates language aesthetic, rhythmic and playful form, finding in it through the way of amusement, communication and opinion.</br>
+
+The committee that selects the winner, consists of Chief Librarian Kent Forest, narrator Bent Hansen, Head of student house in Odense Anja Følleslev and Spoken Word Festival founder Storyteller Jens Peter Madsen.</br>
+
+The prize includes a check for 10,000 kr. Which is sponsored by the Hans Christian Andersen Festival in Odense</p></center></br>
+
+<center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+
+<center><h12>2014: Sebastian Dorset</h12><center>
+<center><img src="Images/IMG_1120-612x352.jpg"  height="140" width="220" alt="logo" /></center>
+
+<center><p>The Award recipient has a linguistic tone that does not aim for the lowest common denominator, he is trusting his audience that they understand sentences where the word FUCK is not included in every other sentence. He trusting his audience intellectual capacity, and do not go for the easy solutions, the quick point or a light laugh. His comedy is characterized by the fact that he dare wonder implied decisions, he dares to address the problem, is not stingy with his opinions, even when it is not the light. And although he is making fun of others, so he possesses the wonderful ability to do it with respect, because he possesses the fool's main characteristic self-irony.</p></center></br>
+
+<center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+
+<center><h12>2013: Hans Laurens</h12><center>
+<center><img src="Images/Hans-Laurens-612x352.jpg"  height="140" width="220" alt="logo" /></center>
+<center><p>His Laurens stands for quality and high ambitions in the development of the own narration while he has been able to meet and inspire storytelling many new practitioners with the recognition and support that makes everyone feel comfortable and develop in the narrative togetherness courses, festivals and workhops. Through the annual campaign "Give a story - 5 classes says," as he has been the initiator and organizer since 2003, when he annually out to a large group of children. In addition, Hans Laurens also inspired others through huskunstnerprojekter, courses and videos on the Internet and through an extensive international work with narrative children from Iran, Congo, Angola, Romania and others.</p></center></br>
+
+<center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+
+<center><h12>2012: Per Vers</h12><center>
+<center><img src="Images/305854_177697412311261_84362767_n-612x352.jpg"  height="140" width="220" alt="logo" /></center>
+<center><p>Rapper, street poet and freestyler Per Vers won Spoken Word Prize in 2012 for his music and special relations with the Danish language. He has since early 2010 been part of the Spoken Word Festival as an entertainer and also helped young talent coming in workshops.</p></center></br>
+
+
+<center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+
+<center><h12>2011: Vibeke Falden</h12><center>
+<center><img src="Images/VibekeFalden-612x352.jpg"  height="140" width="220" alt="logo" /></center>
+<center><p>Electro-poet Vibeke Falden took the prize home in 2011 for his pioneering artistic work with the combination of laptop-driven music and poetry, which unfolds on her debut CD, Debut, from the same year.</p></center></br>
+
+<center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+    
+<center><h12>2010: Piip Poetry - Lasse Thorning and Thorkil Jakobsen</h12><center>
+<center><img src="Images/Piip-612x352.jpg"  height="140" width="220" alt="logo" /></center>
+<center><p>Prize's first winners were the duo Lasse Thorning and Thorkil Jakobsen. They are both DM-winners in the poetry slam and is also behind the association Piip Poetry, which publishes small collections of poetry and is responsible for teaching courses in poetry slam.</p></center></br>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="responsiveslides.min.js"></script>
+<script>
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
+</script>
+
+    </div>
+
+
+
+    <div data-role="footer" data-position="fixed">
+    
+        <center><h9>&copy;Spoken Word Festival '15</h9></center>
+    
+    </div>
+
+</div>
+
+<!-- Highlights and History Page -->
+<!-- Navbar -->
+<div data-role="page" id="HighlightsAndHistory" data-theme="d">
+
+	<div data-role="header">
+
+    <a href="#myPanel" data-icon="bars" data-iconpos="no-text">MENU</a>
+    <a href="#register" data-icon="user" data-iconpos="notext">Register</a>   		
+            
+                <div data-role="navbar">
+                    <center><img src="Images/Logo.png"  height="170" width="350" alt="logo" /></center>  
+                </div>
+                	<div data-role="panel" data-display="overlay" data-theme="d" id="myPanel">
+               
+                            <ul data-role="listview" class="ui-listview" data-filter="true" data-input="#myFilter">
+                            
+                                
+                                <li data-icon="delete"> <a href="#" data-rel="close">Close menu</a></li> </br> </br>
+                                
+                                    <li><a href="#Home">HOME</a></li> </br>
+                                    <li><a href="#Programme">PROGRAMME</a></li> </br>
+                                    <li><a href="#SpokenWordFestival15">SPOKEN WORD FESTIVAL '15</a></li> </br>
+                                    <li><a href="#SpokenWordAwardsWinners">SPOKEN WORD AWARD WINNERS</a></li> </br>
+                                    <li><a href="#HighlightsAndHistory">HIGHLIGHTS AND HISTORY</a></li> </br>
+                                    
+                             </ul>
+                      </div>
+                      
+                      <div data-role="panel" data-position="right" data-display="overlay" data-theme="d" id="register">
+          		
+                <form action="InsertUser.php" method="post">
+                    <h4>Register Here</h4>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" value="">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" value="">
+                    
+                    
+                    
+                    <input type="submit" name="submit" value="Register" data-inline="true">
+                  
+                    
+             	</form>
+                
+                <h4>Change Your Password</h4>
+                <form method="post" action="ChangePass.php">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">      
+                    <label for="password">New Password</label>
+                    <input type="password" name="password" id="password"> 
+                  <input type="submit" data-inline="true" value="Change">
+    			</form>
+                
+               <h4>Subscribe for Information</h4>
+                <form method="post" action="InsertEmail.php">
+                     <input type="email" name="email" id="email" placeholder="Enter your email here">
+                     <input type="submit" data-inline="true" value="Submit">
+    			</form>
+                
+                <h4>Send Emails to Volunteers</h4>
+                <form method="post" action="SendMailsTo.php">
+                  	  <label for="subject">Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="subject" id="subject">
+                      <label for="mymail">Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                       <textarea name="mymail" id="mymail"></textarea>
+                       <input type="submit" data-inline="true" value="Send">
+    			</form>
+                
+                <h4>Delete Subscribers</h4>
+                <form method="post" action="DeleteSubscribers.php">
+                      <label for="email"></label>
+                      <input type="email" name="email" id="email">
+                      <input type="submit" data-inline="true" value="Remove">
+   				 </form>
+                
+                <div class="ui-grid-a">
+                        <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+                    </div>
+                                    
+                </div> 
+                         
+            </div>
+            
+	<div data-role="main" class="ui-content">
+    
+    <center><h4>HIGHLIGHTS AND HISTORY</h4></center>
+    
+    <ul class="rslides">
+          <li><img src="Images/Benny_Andersen-612x352.jpg" height="170" width="260" alt=""></li>
+          <li><img src="Images/Rune_T__Kidde-612x350.jpg" width="260" alt=""></li>
+          <li><img src="Images/Tanya-Davis-612x352.jpg" height="170" width="260" alt=""></li>
+          <li><img src="Images/Jens-Peter-Madsen-612x352.jpg" height="170" width="260" alt=""></li>
+          <li><img src="Images/PerVers-612x352.jpeg" height="170" width="260" alt=""></li>
+        </ul>
+    
+    </br> </br> </br>
+    
+    <center><p>In 2010, there was nothing new in Odense. There were cultural and scattered events, and there were festivals of music and books, for play and learning, but something was missing: The spoken word under one umbrella, storytelling, stand-up comedy, poetry slam, jazz'n'poetry, lectures and rhetoric. It was what the Spoken Word Festival started with nine events over three days with the incredible variety.</p></center> </br>
+    
+    <center><p>This year, the festival also international guests in the form of both the Irish storyteller Niall de Burca, and the Canadian duo Ian Keteku and Brad Morden, who taught and entertained with poetry slam with musical accompaniment.</p></center>
+    
+    <center><div class="video_holder">
+      <video id="video_player" controls poster="" height="290" width="320">
+        <source id="video_mp4" src="Video/Ian Keteku - Laptop Love.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      </video>
+	</div></center>
+    
+    <center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+    
+    <center><p>The TV station Odense Looks Red covered the festival intensively in 2012, and they have a series of reports and footage available on their side.  And if it's too confusing, cut also an excellent ten minute introduction and overview of the whole festival together, as can be seen right here.</p></center>
+    
+    <center><div class="video_holder">
+      <video id="video_player" controls poster="" height="290" width="320">
+        <source id="video_mp4" src="Video/How To Be Alone.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      </video>
+	</div></center>
+    
+    <center><h6> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *</h6></center>
+    
+    <center><p>In 2013 took over Odense Student Management from the original initiator, storyteller Jens Peter Madsen. It also gave Odense a new cultural festival sponsored by several companies, Hans Christian Andersen Festival. That meant a change in date from November to August, but it still managed to stack a festival on the legs with bicycle poetry in the pedestrian streets, storytelling by children and adults, as well as visits from the other side of the Atlantic by poets / musicians Tom Kimmel and Andy Fite, and British storyteller Cat Weatherill.</p></center>
+    
+    <center><div class="video_holder">
+      <video id="video_player" controls poster="" height="290" width="320">
+        <source id="video_mp4" src="Video/Tom Kimmel - Ships.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      </video>
+	</div></center>
+    
+    </div>
+
+
+
+    <div data-role="footer" data-position="fixed">
+    
+        <center><h9>&copy;Spoken Word Festival '15</h9></center>
+    
+    </div>
+
+
+
+</body>
+
+</html>
